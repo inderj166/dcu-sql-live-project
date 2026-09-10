@@ -1,0 +1,76 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+  <title>DCU Student Analytics | Live SQL</title>
+  <link rel="stylesheet" href="style.css" />
+</head>
+<body>
+  <header>
+    <div>
+      <h1>🎓 DCU Student Analytics – Live SQL Project</h1>
+      <p>Practice SQL on a fictional dataset of 100 students</p>
+    </div>
+    <span class="badge">Live SQL Runner</span>
+  </header>
+
+  <main>
+    <section class="stats">
+      <div class="card"><span id="totalStudents">100</span><small>Total Students</small></div>
+      <div class="card"><span id="irishStudents">-</span><small>Irish Students</small></div>
+      <div class="card"><span id="internationalStudents">-</span><small>International Students</small></div>
+      <div class="card"><span id="mastersStudents">-</span><small>Master's Students</small></div>
+      <div class="card"><span id="bachelorsStudents">-</span><small>Bachelor's Students</small></div>
+    </section>
+
+    <section class="workspace">
+      <div class="panel">
+        <h2>SQL Editor</h2>
+        <textarea id="sqlInput">SELECT nationality, COUNT(*) AS total_students
+FROM students
+GROUP BY nationality;</textarea>
+        <div class="buttons">
+          <button id="runBtn">▶ Run SQL</button>
+          <button class="secondary" id="resetBtn">Reset Query</button>
+        </div>
+        <p class="hint">Try the sample queries below or write your own SELECT query.</p>
+      </div>
+
+      <div class="panel">
+        <h2>Result</h2>
+        <div id="status">Database loading...</div>
+        <div id="resultArea"></div>
+      </div>
+    </section>
+
+    <section class="queries">
+      <h2>Sample SQL Queries</h2>
+      <div class="query-grid">
+        <button data-query="SELECT COUNT(*) AS total_students FROM students;">Total students</button>
+        <button data-query="SELECT COUNT(*) AS irish_students FROM students WHERE nationality = 'Irish';">Count Irish students</button>
+        <button data-query="SELECT COUNT(*) AS international_students FROM students WHERE nationality = 'International';">Count international students</button>
+        <button data-query="SELECT degree_level, COUNT(*) AS total FROM students GROUP BY degree_level;">Master's vs Bachelor's</button>
+        <button data-query="SELECT course, COUNT(*) AS enrolled FROM students GROUP BY course ORDER BY enrolled DESC;">Students by course</button>
+        <button data-query="SELECT nationality, degree_level, COUNT(*) AS total FROM students GROUP BY nationality, degree_level;">Nationality + degree level</button>
+        <button data-query="SELECT * FROM students LIMIT 10;">Show first 10 students</button>
+        <button data-query="SELECT course, AVG(age) AS average_age FROM students GROUP BY course;">Average age by course</button>
+      </div>
+    </section>
+
+    <section class="database-info">
+      <h2>Database Schema</h2>
+      <pre>students
+---------------------------------------------------------
+student_id | student_name | age | nationality
+degree_level | course | intake_year</pre>
+      <p><strong>Important:</strong> This is a fictional educational dataset created for portfolio and SQL practice. It is not real DCU student data.</p>
+    </section>
+  </main>
+
+  <footer>Built as a beginner SQL portfolio project • HTML • CSS • JavaScript • SQLite (sql.js)</footer>
+
+  <script src="https://cdnjs.cloudflare.com/ajax/libs/sql.js/1.10.3/sql-wasm.js"></script>
+  <script src="app.js"></script>
+</body>
+</html>
