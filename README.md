@@ -1,4 +1,4 @@
-# DCU Student Analytics – Live SQL Project
+# DCU(DUBLIN CITY UNIVERSITY) Student Analytics – Live SQL Project
 
 A beginner-friendly SQL portfolio project that lets visitors **write and run SQL queries live in the browser**.
 
@@ -61,9 +61,8 @@ Download/clone the project and open `index.html`.
 5. Select branch `main` and folder `/ (root)`
 6. Save
 
-Your portfolio project will then have a live URL similar to:
+see my **Portfolio project** have a live URL similar to:
 
 https://inderj166.github.io/dcu-sql-live-project/
 
-## Suggested GitHub repository description
-**Interactive SQL Student Analytics dashboard with a live SQLite query runner built using HTML, CSS, JavaScript and sql.js.**
+
