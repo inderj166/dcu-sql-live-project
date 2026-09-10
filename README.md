@@ -63,7 +63,7 @@ Download/clone the project and open `index.html`.
 
 Your portfolio project will then have a live URL similar to:
 
-`https://YOUR-USERNAME.github.io/dcu-sql-live-project/`
+https://github.com/inderj16)/dcu-sql-live-project/`
 
 ## Suggested GitHub repository description
 **Interactive SQL Student Analytics dashboard with a live SQLite query runner built using HTML, CSS, JavaScript and sql.js.**
